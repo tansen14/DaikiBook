@@ -1,0 +1,7 @@
+<h1>Commenting Article</h1>
+<%= form_for 'comments/create' do |f| %>
+	<input type="text" name="content">
+	<%= f.submit %>
+<% end %>
+<%= link_to 'Show', @article %> |
+<%= link_to 'Back', articles_path %>
