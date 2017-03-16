@@ -2,12 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :articles
 
-  get 'comments/new' => 'comments#new', as:'comment_new'
-  post 'comments/' => 'articles#create', as:'comment_create'
   get 'comments/edit'
   get 'comments/destroy'
 	
-	get 'articles/:id/comment' => 'articles#comment', as:'comment_article'
+	get 'articles/:id/comment' => 'comments#new'
 
   get '/users' => 'users#index'
 	get '/users/:id' => 'users#show'

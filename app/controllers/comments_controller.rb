@@ -5,10 +5,10 @@ class CommentsController < ApplicationController
   end
 
   def create
-  	comment = comment.new
-		comment.content = params[:content]
-		comment.save
-		redirect_to 'comments/'
+    # comment = Comment.new
+    # comment.content = params[:content]
+    # comment.save
+    redirect_to 'comments/'
 	end
 
   def edit
